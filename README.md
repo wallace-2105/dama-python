@@ -8,7 +8,7 @@
 ---
 
 ## ⚔️ Sobre o jogo
-<img width="959" height="502" alt="image" src="https://github.com/user-attachments/assets/b870a070-0e79-4b76-9a12-e05cfe07b4fc" />
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/38c9143e-51ee-46be-aac5-47e402de5a0e" />
 
 Dama (Checkers) é um dos jogos de tabuleiro mais antigos e estratégicos do mundo. Aqui, ele ganha vida numa versão feita 100% em **Python**, com renderização gráfica via **Pygame** — sem frameworks prontos, sem engine externa, só lógica pura e algumas linhas de código.
 
