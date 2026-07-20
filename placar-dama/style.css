@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0a0e1a;
+    color: #e0e6f0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fundo com efeito de estrelas */
+.fundo-estrelas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 90px 80px, white, transparent),
+        radial-gradient(1px 1px at 150px 150px, white, transparent),
+        radial-gradient(2px 2px at 200px 50px, #00e5ff, transparent),
+        radial-gradient(1px 1px at 250px 200px, white, transparent),
+        radial-gradient(2px 2px at 300px 120px, #ff00e5, transparent),
+        radial-gradient(1px 1px at 350px 20px, white, transparent);
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #00e5ff, #ff00e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+.subtitulo {
+    color: #8892a8;
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.resumo {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.card-stat {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-ciano {
+    border-color: rgba(0, 229, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.card-magenta {
+    border-color: rgba(255, 0, 229, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 229, 0.1);
+}
+
+.card-stat .numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.card-ciano .numero {
+    color: #00e5ff;
+}
+
+.card-magenta .numero {
+    color: #ff00e5;
+}
+
+.card-total .numero {
+    color: #e0e6f0;
+}
+
+.card-stat .label {
+    font-size: 0.8rem;
+    color: #8892a8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.historico {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.historico h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #e0e6f0;
+}
+
+.vazio {
+    color: #8892a8;
+    text-align: center;
+    padding: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px 12px;
+    color: #8892a8;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.badge-ciano {
+    background: rgba(0, 229, 255, 0.15);
+    color: #00e5ff;
+    border: 1px solid rgba(0, 229, 255, 0.4);
+}
+
+.badge-magenta {
+    background: rgba(255, 0, 229, 0.15);
+    color: #ff00e5;
+    border: 1px solid rgba(255, 0, 229, 0.4);
+}
+
+form {
+    text-align: center;
+}
+
+.botao-zerar {
+    background: rgba(255, 60, 60, 0.1);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 60, 60, 0.4);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.botao-zerar:hover {
+    background: rgba(255, 60, 60, 0.2);
+    box-shadow: 0 0 20px rgba(255, 60, 60, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #556077;
+    font-size: 0.85rem;
+}
