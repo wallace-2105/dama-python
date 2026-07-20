@@ -1,7 +1,6 @@
-🛸 DAMA — Space Edition
+# 🛸 DAMA — Space Edition
 
-
-Um clássico atemporal, reconstruído do zero com Python + Pygame — agora numa versão futurista, direto do espaço.
+> Um clássico atemporal, reconstruído do zero com Python + Pygame — agora numa versão futurista, direto do espaço.
 
 <!-- 🎮 Coloque aqui um print ou GIF do jogo rodando -->
 <!-- ![gameplay](preview.png) -->
@@ -10,9 +9,9 @@ Um clássico atemporal, reconstruído do zero com Python + Pygame — agora numa
 
 ## ⚔️ Sobre o jogo
 <img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/38c9143e-51ee-46be-aac5-47e402de5a0e" />
-Dama (Checkers) é um dos jogos de tabuleiro mais antigos e estratégicos do mundo. Aqui, ele ganha vida numa versão feita 100% em Python, com renderização gráfica via Pygame — sem frameworks prontos, sem engine externa, só lógica pura e algumas linhas de código.
+Dama (Checkers) é um dos jogos de tabuleiro mais antigos e estratégicos do mundo. Aqui, ele ganha vida numa versão feita 100% em **Python**, com renderização gráfica via **Pygame** — sem frameworks prontos, sem engine externa, só lógica pura e algumas linhas de código.
 
-Tabuleiro escuro, peças com brilho neon em ciano e magenta, e uma estética futurista/espacial que foge do visual clássico de dama.
+Tabuleiro escuro, peças com brilho neon em **ciano** e **magenta**, e uma estética futurista/espacial que foge do visual clássico de dama.
 
 Dois jogadores. Um tabuleiro. Captura obrigatória. Sem piedade.
 
@@ -28,14 +27,11 @@ Dois jogadores. Um tabuleiro. Captura obrigatória. Sem piedade.
 | Fechar o jogo | `X` da janela |
 
 **Regras rápidas:**
-Regras rápidas:
-
-
-🩵 Ciano sempre começa
-Peças normais andam 1 casa na diagonal, pra frente
-Captura é obrigatória quando disponível — inclusive captura múltipla em sequência
-Ao alcançar a última linha do tabuleiro, a peça vira Dama 👑 e passa a andar em qualquer direção diagonal
-Quem ficar sem peças, perde
+- 🩵 Ciano sempre começa
+- Peças normais andam 1 casa na diagonal, pra frente
+- Captura é obrigatória quando disponível — inclusive captura múltipla em sequência
+- Ao alcançar a última linha do tabuleiro, a peça vira **Dama** 👑 e passa a andar em qualquer direção diagonal
+- Quem ficar sem peças, perde
 
 ---
 
@@ -43,7 +39,7 @@ Quem ficar sem peças, perde
 
 Pré-requisitos: **Python 3.12+**
 
-\`\`\`bash
+```bash
 # Clone o repositório
 git clone https://github.com/wallace-2105/dama-python.git
 cd dama-python
@@ -53,7 +49,7 @@ pip install -r requirements.txt
 
 # Jogue!
 python dama.py
-\`\`\`
+```
 
 ---
 
@@ -66,7 +62,7 @@ python dama.py
 
 ## 📈 Roadmap (próximas evoluções)
 
-- [x] Visual premium — sprites de peças e tabuleiro com textura
+- [x] Visual futurista/espacial — peças com brilho neon
 - [ ] Animações de movimento e captura
 - [ ] Efeitos sonoros
 - [ ] Modo contra IA (algoritmo minimax)
@@ -82,4 +78,4 @@ python dama.py
 
 ---
 
-<p align="center">Feito com ♟️ e muito café</p>
+<p align="center">Feito com 🛸 e muito café</p>
