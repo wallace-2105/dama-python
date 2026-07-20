@@ -12,6 +12,8 @@ import sys
 import os
 import random
 import math
+import json
+from datetime import datetime
 
 # ═══════════════════════════════════════════════════════════════
 #  CONFIGURAÇÕES DE LAYOUT
@@ -983,6 +985,49 @@ def get_pos_mouse(pos):
     return linha, coluna
 
 
+# Mapeamento da cor lógica retornada por vencedor() → nome exibido no HUD
+_NOME_VENCEDOR_HUD = {
+    "VERMELHO": "CIANO",
+    "AZUL": "MAGENTA",
+}
+
+
+def salvar_resultado(vencedor):
+    """Salva o resultado da partida em placar-dama/placar.json.
+
+    Cada registro contém o nome do vencedor (CIANO ou MAGENTA) e a
+    data/hora formatada como string legível.
+    """
+    caminho = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "placar-dama",
+        "placar.json",
+    )
+
+    # Garante que o diretório exista
+    os.makedirs(os.path.dirname(caminho), exist_ok=True)
+
+    # Se o arquivo não existir, cria com lista vazia
+    if not os.path.exists(caminho):
+        with open(caminho, "w", encoding="utf-8") as f:
+            json.dump([], f)
+
+    # Lê o conteúdo atual
+    with open(caminho, "r", encoding="utf-8") as f:
+        partidas = json.load(f)
+
+    # Adiciona novo registro
+    nome_vencedor = _NOME_VENCEDOR_HUD.get(vencedor, vencedor)
+    partidas.append({
+        "vencedor": nome_vencedor,
+        "data": datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+    })
+
+    # Salva a lista atualizada
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(partidas, f, ensure_ascii=False, indent=2)
+
+
 # ═══════════════════════════════════════════════════════════════
 #  PRÉ-GERAÇÃO DE TEXTURAS (executado uma vez na inicialização)
 # ═══════════════════════════════════════════════════════════════
@@ -1049,6 +1094,7 @@ def main():
             if venc:
                 vencedor_nome = venc
                 estado = ESTADO_FIM
+                salvar_resultado(venc)
 
         elif estado == ESTADO_FIM:
             jogo.atualizar(mouse_pos, tempo)
