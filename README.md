@@ -108,7 +108,7 @@ dama-python/
 
 - [x] Visual futurista/espacial — peças com brilho neon
 - [x] Placar de partidas integrado (Python salva, PHP exibe)
-- [ ] Animações de movimento e captura
+- [x] Animações de movimento e captura
 - [ ] Efeitos sonoros
 - [ ] Modo contra IA (algoritmo minimax)
 
